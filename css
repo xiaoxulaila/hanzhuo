@@ -1,0 +1,1419 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background-color: #fff;
+    min-width: 1100px;
+}
+
+body {
+    background-color: #fff;
+    min-width: 1100px;
+}
+
+#navber {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    top: 0px;
+    background-color: #fff;
+    z-index: 1030;
+}
+
+#sb {
+    width: 100%;
+    height: 20px;
+    background-color: #fafafa;
+    border-top: solid 1px #e6e6e6;
+    border-bottom: solid 1px #e6e6e6;
+}
+
+#sbd {
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+.SBDp {
+    width: 550px;
+    font-size: 12px;
+    float: left;
+    letter-spacing: 0.18em;
+}
+
+.SBDp span {
+    color: #F00;
+    font-weight: bold;
+}
+
+.SBDp.AC {
+    text-align: right;
+}
+
+#nav {
+    width: 1200px;
+    margin: auto;
+    height: 80px;
+}
+
+#navLogo {
+    width: 400px;
+    height: 80px;
+    float: left;
+}
+
+#navImg {
+    width: 400px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #fff;
+    float: left;
+}
+
+#navImg img {
+    width: 300px;
+}
+
+#navb {
+    width: 650px;
+    float: right;
+    height: 80px;
+}
+
+#navb a {
+    text-decoration: none;
+    color: #000;
+}
+
+#navb a:hover {
+    color: #f00;
+}
+
+.navbe {
+    width: 14%;
+    height: 100%;
+    font-size: 15px;
+    text-align: center;
+    line-height: 500%;
+    float: left;
+    background-color: #fff;
+    position: relative;
+}
+
+.navs {
+    /* position: absolute;
+    top: 58px;
+    left: 41px; */
+    border: 5px solid;
+    display: none;
+    transition: 0.2s all linear;
+    border-color: red white white white;
+    list-style: none;
+    cursor: pointer;
+    /* display: block; */
+    width: 0px;
+    margin: auto;
+}
+
+.navbe:hover .navs {
+    display: block;
+    border-color: red white white white;
+}
+
+.navbee {
+    height: 50px;
+    width: 70px;
+    margin: auto;
+    transition: 0.2s all linear;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbe:hover .navbee {
+    padding-bottom: 5px;
+    color: red;
+    border-bottom: 3px solid #F00;
+}
+
+.navbee::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    border-bottom: 3px solid #000;
+    transition: 0.2s all linear;
+}
+
+.navbe:hover::before {
+    width: 70px;
+    top: 0;
+    left: 0;
+    transition-delay: 0.1s;
+    /*过渡延迟*/
+    border-bottom-color: #F00;
+}
+
+.navbee:hover~.navbee::before {
+    left: 0;
+}
+
+.navaa {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    display: none;
+    color: white;
+    text-align: center;
+    z-index: -5;
+    height: 40px;
+    line-height: 200%;
+}
+
+.navaa a {
+    display: inline-block;
+    width: 91px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+}
+
+.navbe:hover .navaa {
+    display: block;
+    /* width: 50px; */
+}
+
+.navaa a:hover {
+    color: #f00;
+}
+
+.nanya {
+    width: 100%;
+    /* height: 89px; */
+}
+
+#rotations {
+    max-width: 100%;
+    height: 570px;
+    overflow: hidden;
+}
+
+#obj {
+    width: 100%;
+    max-height: 600px;
+}
+
+.navberA {
+    text-decoration: none;
+}
+
+#RRRTS {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: -90px;
+    z-index: 1030;
+}
+
+#RRRTSForm {
+    width: 400px;
+    float: left;
+    margin-left: 50px;
+}
+
+.RRRTS {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #fff;
+    border: #f00 1px solid;
+}
+
+.RRRTS:hover {
+    color: #ccc;
+}
+
+.RRRTSI {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #f00;
+    color: #fff;
+    font-size: 16px;
+    border: #f00 1px solid;
+}
+
+.RRRTSI:hover {
+    background-color: #f5f5f5;
+    color: #ccc;
+}
+
+#leagvebuilding {
+    width: 100%;
+    height: 880px;
+    /* position: relative;
+    top: -85px; */
+}
+
+#leagve {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+#leagveTitle {
+    width: 1200px;
+    height: 200px;
+    text-align: center;
+}
+
+#leagveTitleA {
+    color: #ccc;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    line-height: 370%;
+    width: 1200px;
+    clear: both;
+}
+
+#leagveTitleB {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: -90px;
+    z-index: 5;
+}
+
+#leagveTitleC {
+    color: #F00;
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+}
+
+#leagveDiv {
+    width: 100%;
+    height: 50px;
+}
+
+#leagveDivNav {
+    width: 736px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+#leagveDivNav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.LDNav {
+    float: left;
+    width: 80px;
+    margin: 0px 5px;
+    height: 30px;
+    text-align: center;
+    line-height: 200%;
+    font-size: 15px;
+    border: #ccc 1px solid;
+    cursor: help;
+    cursor: pointer;
+    transition: 0.4s all linear;
+    cursor: pointer;
+}
+
+.LDNav:hover {
+    transition: 0.4s all linear;
+    background-color: #f00;
+    color: #fff;
+}
+
+
+/* 
+.LDNav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    background-color: #f00;
+    transition: 0.2s all linear;
+}
+
+.LDNav:hover::before {
+    width: 70px;
+    top: 0;
+    left: 0;
+    transition-delay: 0.1s;
+    /*过渡延迟*/
+
+background-color: #f00;
+
+}
+.LDNav:hover~.LDNav::before {
+    left: 0;
+}
+*/ .leagveDivMain {
+    width: 1200px;
+    height: 570px;
+    /* margin-left: 20px; */
+    
+    float: right;
+}
+.LDMain {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+.LDMain a {
+    text-decoration: none;
+    color: #000;
+    float: left;
+    width: 270px;
+    height: 250px;
+    margin: 5px 15px;
+}
+.LDM {
+    width: 270px;
+    height: 250px;
+    /* margin: 5px; */
+    
+    border: #ccc 1px solid;
+}
+.LDMG {
+    width: 270px;
+    height: 250px;
+    position: relative;
+    top: -256px;
+    left: 6px;
+    background-color: rgb(255, 255, 255, 0.1);
+    color: rgb(0, 0, 0, 0);
+    text-align: center;
+    line-height: 500%;
+    font-size: 22px;
+}
+.LDMG:hover {
+    background-color: rgb(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255, 0.9);
+}
+.LDMImg {
+    width: 270px;
+    height: 200px;
+    background-color: #ccc;
+    cursor: pointer;
+    overflow: hidden;
+}
+.LDMImg img {
+    width: 270px;
+    height: 200px;
+    transition: all 0.6s;
+}
+.LDM:hover .LDMImg img {
+    transform: scale(1.1, 1.1);
+}
+.LDM:hover .LDMText {
+    color: #f00;
+}
+.LDMText {
+    width: 270px;
+    height: 50px;
+    text-align: center;
+    line-height: 300%;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+#leagveInput {
+    width: 100%;
+    height: 50px;
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+}
+#leagveInput a {
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    height: 50px;
+}
+#LInput {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    transition: 0.4s all linear;
+    background-color: #f00;
+    margin: auto;
+    color: white;
+    border-radius: 5px;
+    line-height: 40px;
+}
+#LInput:hover {
+    transition: 0.4s all linear;
+    border: #f00 1px solid;
+    background-color: #fff;
+    color: #F00;
+}
+#advantage {
+    width: 100%;
+    height: 500px;
+}
+#advantageMain {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+#AMTitle {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+#AMTitleA {
+    color: #ccc;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    line-height: 400%;
+}
+#AMTitleB {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: -90px;
+    z-index: 5;
+}
+#AMTitleC {
+    color: #F00;
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+}
+#AMain {
+    width: 100%;
+    height: 250px;
+}
+.AMainDiv {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.AMainDivImg {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 65px;
+    text-align: center;
+    background-color: #666;
+    padding-top: 2.7px;
+}
+.AMDDiv {
+    width: 115px;
+    height: 117px;
+    background-color: #fff;
+    border-radius: 57.5px;
+    margin: auto;
+}
+.AMainDivImg:hover {
+    animation: myfirst 2s;
+    -webkit-animation: myfirst 2s;
+    /* Safari 与 Chrome */
+    
+    border-radius: 65px;
+    /* background-image:-webkit-linear-gradient(top,#FFF,#f00); */
+}
+@keyframes myfirst {
+    0% {
+        background-image: -webkit-linear-gradient(bottom, #FFF, #fee);
+    }
+    
+    25% {
+        background-image: -webkit-linear-gradient(bottom, #Fee, #ff9798);
+    }
+    
+    50% {
+        background-image: -webkit-linear-gradient(bottom, #ff9798, #f00);
+    }
+    
+    100% {
+        background: #f00
+    }
+}
+@-webkit-keyframes myfirst
+/* Safari 与 Chrome */
+{
+    0% {
+        background-image: -webkit-linear-gradient(bottom, #FFF, #fbb);
+    }
+    
+    25% {
+        background-image: -webkit-linear-gradient(bottom, #Fbb, #ff9798);
+    }
+    
+    50% {
+        background-image: -webkit-linear-gradient(bottom, #ff9798, #f00);
+    }
+    
+    100% {
+        background: #f00
+    }
+}
+.AMainDivImg img {
+    width: 90px;
+    height: 90px;
+    margin-top: 13px;
+    border-radius: 15px;
+}
+.AMainDivH1 {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 200%;
+    color: #666;
+}
+.AMainDivP {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    color: #666;
+}
+#cases {
+    width: 100%;
+}
+#casesM {
+    width: 1200px;
+    margin: auto;
+}
+#casesTitle {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+#casesTitleA {
+    color: #ccc;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    line-height: 400%;
+}
+#casesTitleB {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: -90px;
+    z-index: 5;
+}
+#casesTitleC {
+    color: #F00;
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+}
+#casesDiv {
+    width: 100%;
+    /* height: 400px; */
+}
+#casesDivMain {
+    width: 100%;
+    /* height: 350px; */
+    
+    padding-left: 0px;
+}
+#casesDivMain a {
+    color: #000;
+    text-decoration: none;
+}
+.CDMainDiv {
+    width: 250px;
+    height: 275px;
+    float: left;
+    margin: 10px 25px;
+}
+.CDMdiv {
+    width: 250px;
+    height: 200px;
+    background-color: #666;
+    border-radius: 15px;
+    /* float: left; */
+    
+    margin: 0px 3px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.CDMdiv img {
+    width: 250px;
+    height: 200px;
+    transition: all 0.6s;
+}
+.CDMainDiv:hover .CDMdiv img {
+    transform: scale(1.1, 1.1);
+}
+.CDMText {
+    width: 245px;
+    height: 20px;
+    text-align: center;
+    color: #000;
+    /* font-weight: bold; */
+    
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 10px;
+    position: absolute;
+    z-index: 3px;
+}
+.CDMainDiv:hover .CDMText {
+    color: #f00;
+}
+#casesInput {
+    width: 100%;
+    height: 50px;
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+}
+#casesInput a {
+    text-decoration: none;
+    color: #000;
+}
+#LInput {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    transition: 0.4s all linear;
+    background-color: #f00;
+    margin: auto;
+    border-radius: 5px;
+    line-height: 220%;
+}
+#column {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: 100% 200%;
+    margin-top: 100px;
+    transition: all .6s;
+    -webkit-transition: all .6s;
+    /* background-attachment: fixed; */
+}
+#columnMain {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    /* background-color: rgb(0, 0, 0, 0.1); */
+    
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+#columnMain img {
+    width: 100%;
+    /* transition: all 0.6s; */
+}
+
+/* #columnMain img:hover {
+transform: scale(1.2);
+} */
+#columnMainH1 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100px;
+}
+#columnMainP {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+#columnMainInput {
+    width: 100%;
+    /* margin-top: 20px; */
+    
+    position: absolute;
+    bottom: 35px;
+}
+#columnMainInput a {
+    text-decoration: none;
+    color: #000;
+}
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active {
+    background-color: red;
+}
+#RSBASe {
+    min-width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    top: -2px;
+}
+#RSBASe img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: all 4s;
+}
+#RSBASe img:hover {
+    transform: scale(1.1, 1.1);
+}
+#CMInput {
+    width: 140px;
+    height: 35px;
+    text-align: center;
+    border-radius: 15px;
+    line-height: 35px;
+    margin: auto;
+    color: #fff;
+    transition: 0.4s all linear;
+    background-color: #F00;
+    position: relative;
+    z-index: 50;
+}
+#CMInput:hover {
+    transition: 0.4s all linear;
+    background-color: #fff;
+    color: #f00;
+    border: #F00 1px solid;
+}
+#ad {
+    width: 100%;
+    height: 500px;
+}
+#adMain {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+#adMainLeft {
+    width: 500px;
+    height: 480px;
+    padding: 10px 0px;
+    float: left;
+}
+#adMainLeft a {
+    text-decoration: none;
+    color: #000;
+}
+.adH1 {
+    font-size: 20px;
+    line-height: 300%;
+}
+.adLMain {
+    width: 400px;
+    height: 120px;
+    border-radius: 15px;
+    background-color: #ccc;
+    margin: 5px 0px;
+}
+.adLMain img {
+    width: 400px;
+    height: 120px;
+}
+.adLMainDiv {
+    width: 400px;
+    height: 120px;
+    border-radius: 15px;
+    position: relative;
+    top: -120px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #000 1px 1px 5px;
+    line-height: 400%;
+}
+.adLMainDiv:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+#adMainRight {
+    width: 600px;
+    height: 480px;
+    padding: 10px 0px;
+    float: right;
+}
+.adMRNav {
+    width: 600px;
+    height: 50px;
+}
+.adMRNav a {
+    text-decoration: none;
+    color: #000;
+}
+.adMRNavder {
+    width: 195px;
+    height: 40px;
+    border: #ccc 1px solid;
+    float: left;
+    text-align: center;
+    line-height: 250%;
+    cursor: help;
+    cursor: pointer;
+    transition: 0.4s all linear;
+}
+.adMRNavder:hover {
+    transition: 0.4s all linear;
+    background-color: #f00;
+    cursor: help;
+    cursor: pointer;
+    color: #fff;
+}
+.ADbMRN {
+    width: 590px;
+    height: 95px;
+    margin: 15px 0px;
+}
+.ADMRN {
+    width: 500px;
+    height: 95px;
+    margin: 15px 0px;
+}
+.ADMRNImg {
+    width: 200px;
+    /* background-color: #ccc; */
+    
+    height: 88px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.ADMRNImg img {
+    width: 200px;
+    height: 95px;
+    border-radius: 10px;
+    transition: all 0.6s;
+}
+.ADbMRN:hover .ADMRNH1 {
+    color: #f00;
+}
+.ADbMRN:hover .ADMRNImg img {
+    transform: scale(1.1, 1.1);
+}
+.ADMRN:hover .ADMRNH1 {
+    color: #f00;
+}
+.ADMRN:hover .ADMRNImg img {
+    transform: scale(1.1, 1.1);
+}
+.ADMRNH1 {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    font-size: 18px;
+    width: 380px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.ADMRNH5 {
+    float: left;
+    width: 380px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #666;
+    font-size: 14px;
+}
+#facultyteam {
+    width: 100%;
+    height: 580px;
+    background-color: #f5f5f5;
+}
+#facultyteamM {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    background-color: #f5f5f5;
+}
+#facultyteamTitle {
+    width: 100%;
+    height: 155px;
+    text-align: center;
+}
+#facultyteamTitleA {
+    color: #ccc;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    line-height: 400%;
+}
+#facultyteamTitleB {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: -90px;
+    z-index: 5;
+}
+#facultyteamTitleC {
+    color: #F00;
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+}
+#facultyteamDiv {
+    width: 100%;
+    height: 350px;
+}
+#facultyteamDivMain {
+    width: 100%;
+    height: 350px;
+}
+#facultyteamDivMain a {
+    text-decoration: none;
+    color: #fff;
+}
+#moveLeft {
+    width: 20px;
+    height: 50px;
+    background-color: #666;
+    text-align: center;
+    line-height: 200%;
+    font-size: 22px;
+    margin: 130px 30px;
+    float: left;
+    color: #fff;
+}
+#moveRight {
+    width: 20px;
+    height: 50px;
+    background-color: #666;
+    text-align: center;
+    line-height: 200%;
+    font-size: 22px;
+    margin: 130px 30px;
+    float: left;
+    color: #fff;
+}
+#FTDMain {
+    width: 1200px;
+    height: 100%;
+    float: left;
+}
+#FTDMain a {
+    text-decoration: none;
+    color: #000;
+}
+.FTDMainDiv {
+    width: 200px;
+    height: 300px;
+    border: #ccc 1px solid;
+    float: left;
+    background-color: #fff;
+    margin: 0px 16px;
+}
+.FTDMainDiv:hover {
+    transition: 0.4s all linear;
+    background-color: #f00;
+    color: #fff;
+}
+.FTDMDImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: #ccc;
+    margin: 10px 20px;
+}
+.FTDMDImg img {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+.FTDMDH1 {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 150%;
+}
+.FTDMDP {
+    width: 90%;
+    height: 90px;
+    margin: auto;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+#new {
+    width: 100%;
+    height: 700px;
+}
+#newM {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+#newTitle {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+#newTitleA {
+    color: #ccc;
+    font-size: 40px;
+    position: relative;
+    z-index: 1;
+    line-height: 400%;
+}
+#newTitleB {
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    top: -90px;
+    z-index: 5;
+}
+#newTitleC {
+    color: #F00;
+    font-size: 30px;
+    position: relative;
+    top: -100px;
+    z-index: 5;
+}
+#newDiv {
+    width: 100%;
+    height: 420px;
+    float: left;
+}
+#newDivMain {
+    width: 1200px;
+    height: 350px;
+    /* padding-left: 70px; */
+}
+#newInput {
+    width: 100%;
+    height: 50px;
+    clear: both;
+    text-align: center;
+}
+#newInput a {
+    text-decoration: none;
+    color: #000;
+}
+#NInput {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    transition: 0.4s all linear;
+    background-color: #f00;
+    margin: auto;
+    color: white;
+    border-radius: 5px;
+    line-height: 40px;
+}
+#NInput:hover {
+    transition: 0.4s all linear;
+    border: #f00 1px solid;
+    background-color: #fff;
+    color: #F00;
+}
+.NDMainH {
+    width: 100%;
+    height: 30px;
+}
+.NDMain {
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+.NDMainH1 {
+    width: 100px;
+    height: 30px;
+    margin-right: 300px;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: solid #666 1px;
+}
+.NDMainDiv {
+    width: 390px;
+    height: 100px;
+    margin: 10px 0px;
+}
+.NDMainDiv a {
+    color: #000;
+    text-decoration: none;
+}
+.NDMainDivImg {
+    width: 150px;
+    height: 100px;
+    background-color: #ccc;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.NDMainDivImg img {
+    width: 150px;
+    height: 100px;
+    transition: all 0.6s;
+    border-radius: 10px;
+}
+.NDMainDiv:hover .NDMDTH1 {
+    color: #f00;
+}
+.NDMainDiv:hover .NDMainDivImg img {
+    transform: scale(1.1, 1.1);
+}
+.NDMainDivText {
+    width: 300px;
+    height: 50px;
+}
+.NDMDTH1 {
+    width: 200px;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    height: 20px;
+    margin-left: 160px;
+}
+.NDMDTP {
+    white-space: nowrap;
+    width: 200px;
+    color: #666;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-left: 160px;
+}
+.NDMDAY {
+    width: 140px;
+    font-size: 12px;
+    color: #000;
+    height: 14px;
+    margin-left: 160px;
+}
+#footer {
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    
+    background-size: 100% 100%;
+    clear: both;
+}
+#footerMain {
+    width: 1100px;
+    height: 400px;
+    margin: auto;
+    color: #fff;
+}
+#footerBotter {
+    width: 100%;
+    text-align: center;
+}
+#footerLeft {
+    width: 33.3%;
+    height: 320px;
+    margin: 10px 0px;
+    float: left;
+}
+#footerLeft a {
+    text-decoration: none;
+    color: #fff;
+}
+#footerLeft a:hover {
+    color: #f00;
+}
+#footerLeftH1 {
+    line-height: 400%;
+}
+.footerLeftP {
+    font-size: 14px;
+    margin: 20px 0px;
+    width: 100%;
+    height: 20px;
+}
+.footerLeftP img {
+    width: 22px;
+    margin-right: 5px;
+    float: left;
+}
+.footerLeftP span {
+    font-size: 18px;
+    color: #f00;
+}
+.FLPDiv {
+    float: left;
+    font-size: 16px;
+}
+#footerRight {
+    float: left;
+    text-align: center;
+    width: 33.3%;
+}
+#footerRight form {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+.FRIH1 {
+    font-size: 20px;
+    line-height: 300%;
+}
+.FRIH5 {
+    font-size: 16px;
+    line-height: 300%;
+}
+#footerBotter {
+    width: 100%;
+    clear: both;
+}
+.FRI {
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+    color: black;
+    background-color: #ddd;
+    border: 0;
+    border-radius: 5px;
+    margin: 3px 0px;
+}
+.FRIB {
+    width: 180px;
+    height: 40px;
+    transition: 0.4s all linear;
+    background-color: red;
+    border: 1px red solid;
+    color: white;
+    border-radius: 5px;
+    margin: 50px auto;
+    font-size: 16px;
+}
+.FRIB:hover {
+    transition: 0.4s all linear;
+    background-color: white;
+    color: red;
+}
+#footerQR {
+    width: 250px;
+    height: 250px;
+    float: right;
+    padding-top: 100px;
+}
+.footerQR {
+    width: 100px;
+    height: 150px;
+    margin: 30px 3px;
+    float: left;
+}
+.footerQRImg {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+}
+.footerQRH1 {
+    width: 100px;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 15px;
+}
+.swiper-container {
+    width: 1100px;
+    height: auto;
+    padding: 90px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 250px;
+    height: 200px;
+    /* Center slide text vertically */
+    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition-property: all;
+}
+#progressEffect {
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 20px;
+    position: relative;
+    top: 100px;
+}
+#titleD {
+    width: 100%;
+    height: 20px;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -100px;
+}
+.activeq {
+    color: red!important;
+}
+.CDMText1 {
+    margin-top: 5px;
+    font-size: 16px;
+    padding-top: 30px;
+    overflow: hidden;
+}
+.CDMText2 {
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(68, 67, 67);
+    padding-top: 55px;
+}
+.leagveDivMain #leagveInput a {
+    margin: 10px 0 0 2px;
+}
+
+.caseH2,
+.caseH3,
+.CDMText1,
+.CDMText2 {
+    color: #000!important;
+}
