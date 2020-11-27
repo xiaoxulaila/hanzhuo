@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords"  content="{pboot:pagekeywords}">
+    <meta name="description"  content="{pboot:pagedescription}">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/news.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/abc.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/about.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/case.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/swiper.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/package/css/swiper.min.css">
+    <link href="{pboot:sitetplpath}/css/jquery.exzoom.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=0.32,maximum-scale=1.0,minimum-scale=0.3,user-scalable=no">
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="{pboot:sitetplpath}/js/swiper.js"></script>
+    <script src="{pboot:sitetplpath}/js/swiper.min.js"></script>
+    <script src="{pboot:sitetplpath}/js/jquery.js"></script>
+    <script src="{pboot:sitetplpath}/js/swiper.js"></script>
+    <script src="{pboot:sitetplpath}/js/swiper.min.js"></script>
+    <title>{pboot:pagetitle}</title>
+</head>
+
+<body>
+    <div id="navber">
+        <div id="nav">
+            <div id="navLogo">
+                <div id="navImg"><img src="{pboot:sitelogo}" alt=""></div>
+            </div>
+            <div class="navColumn">
+                <div id="navb_appear" onclick="navb_appearIn()"><img src="{pboot:sitetplpath}/images/logoyd.png" alt="">
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+    <div id="navb">
+        <div id="navb_delete" class="navbe" onclick="navb_deleteIn()">×</div>
+        <a href="/">
+            <div class="navbe">
+                <div class="navbee">网站首页</div>
+            </div>
+        </a>
+        {pboot:nav num=6}
+        <a href="[nav:link]">
+            <div class="navbe">
+                <div class="navbee">[nav:name]</div>
+
+                <!-- <div class="navaa">
+                    {pboot:2nav parent=[nav:scode]}
+
+                    <a href="[2nav:link]">
+                        [2nav:name]
+                    </a> {/pboot:2nav}
+                </div> -->
+            </div>
+        </a>
+        {/pboot:nav}
+        <script>
+            var navb_appear = document.getElementById('navb_appear');
+            var navb_delete = document.getElementById('navb_delete');
+            var navb = document.getElementById('navb');
+            navb.style.display = "none";
+            function navb_appearIn() {
+                navb.style.display = "block";
+            }
+
+            function navb_deleteIn() {
+                navb.style.display = "none";
+            }
+        </script>
+    </div>
+    <style>
+        #navb{
+            position: fixed;
+            top: 290px;
+            z-index: 6000;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0,0.1);
+        }
+        #navb_delete{
+            width: 100%;
+            text-align: right;
+            font-size: 9rem;
+            height: 100px;
+        }
+    </style>
+    <div class="nanya"></div>
+    <div id="rotations" style="position: relative;overflow: hidden;">
+        <div id="surfaceMain">
+            {pboot:slide gid=2 num=5}
+            <a href="[slide:link]" class="navberA"><img src="[slide:src]" class="obj" id="obj"
+                style="position: relative;z-index: 1;"></a>
+            {/pboot:slide}
+        </div>
+        <!-- <div style="position: relative;top: -550px;width: 100%;">
+            <video src="{pboot:sitetplpath}/images/333.mp4" muted loop autoplay width="100%" height="600px"></video>
+        </div> -->
+        <div style="text-align:center;position: absolute; bottom: 3rem;z-index: 51; width: 100%;">
+            {pboot:slide gid=1}
+            <span class="dot " onclick="add([slide:n])"></span> {/pboot:slide}
+        </div>
+    </div>
+    <div id="RRRTS" style="z-index: 51;">
+        <form id="RRRTSForm" action="{pboot:scaction}" method="get">
+            <input type="text" value="{label:gj}" class="RRRTS" name="keyword">
+            <button type="submit" class="RRRTSI">搜索</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    var curIndex = 0;
+    // var timeInterval = 3000;
+
+    var timeId = null;
+    var arr = document.getElementsByClassName("obj");
+    var dots = document.getElementsByClassName("dot");
+    dots[0].className += "active";
+
+    ;
+    timeId = setInterval('changeImg()', 3500);
+
+    for (var i = 1; i < arr.length; i++) {
+        arr[i].style.display = "none"
+
+    }
+
+    // slider(curIndex);
+
+    // function slider(curIndex) {
+    //     if (curIndex == arr.length - 1) {
+    //         clearInterval(timeId);
+    //         timeId = setInterval('changeImg()', 2000);
+
+    //     } else {
+
+    //         timeId = setInterval('changeImg()', 10000);
+
+    //     }
+
+    // }
+
+    function add(n) {
+
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+            arr[i].style.display = "none";
+        }
+
+        dots[n].className += "active";
+        arr[n].style.display = "block";
+
+        if (n < arr.length - 1) {
+            clearInterval(timeId);
+            timeId = setInterval('changeImg()', 3500);
+        }
+
+        if (n == arr.length - 1) {
+            clearInterval(timeId);
+            timeId = setInterval('changeImg()', 15000);
+        }
+    };
+
+    function changeImg() {
+        var obj = document.getElementById("obj");
+        if (curIndex == arr.length - 1) {
+            curIndex = 0;
+        } else {
+            curIndex++;
+        }
+
+        if (curIndex < arr.length - 1) {
+            clearInterval(timeId);
+            timeId = setInterval('changeImg()', 3500);
+        }
+
+        if (curIndex == arr.length - 1) {
+            clearInterval(timeId);
+            timeId = setInterval('changeImg()', 15000);
+        }
+
+
+
+
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+            arr[i].style.display = "none";
+        }
+        dots[curIndex].className += "active";
+        arr[curIndex].style.display = "block";
+        // obj = arr[curIndex];
+    }
+</script>
+
+</html>

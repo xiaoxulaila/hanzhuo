@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="{pboot:sitetplpath}/css/sidelight.css">
+<script src="{pboot:sitetplpath}/js/jquery.min.js"></script>
+<div style="position: relative; ">
+    <div id="rightArrow" style="right: 127px; background-position: 0px 0px;">
+        <img id="img" src="{pboot:sitetplpath}/images/b1.png" style="top:209px;right: -128px;">
+    </div>
+    <div id="floatDivBoxs" style="right: 0px;">
+
+
+        <h4>在线咨询</h4>
+        <ul>
+            <dl class="dl_tell">
+                <dt>全国咨询</dt>
+                <dd>{pboot:companyphone}</dd>
+            </dl>
+
+            <dl class="dl_tell">
+                <dt>客服在线</dt>
+                <dd>{pboot:companymobile}</dd>
+            </dl>
+
+            <dl class="dl_weixin">
+                <dt>扫码加微信</dt>
+                <dd><img src="{pboot:companyweixin}"></dd>
+            </dl>
+        </ul>
+
+    </div>
+</div>
+
+
+<script src="{pboot:sitetplpath}/js/jquery.js"></script>
+<script>
+    var i = 0;
+    $("#rightArrow").click(function() {
+
+        if (i % 2 == 0) {
+            $("#floatDivBoxs").css("right", -127);
+            $("#rightArrow").css("right", 0);
+            $("#img").attr("src", "{pboot:sitetplpath}/images/b2.png");
+        }
+        if (i % 2 == 1) {
+            $("#floatDivBoxs").css("right", 0);
+            $("#rightArrow").css("right", 127);
+            $("#img").attr("src", "{pboot:sitetplpath}/images/b1.png");
+        }
+        i++;
+
+    })
+</script>

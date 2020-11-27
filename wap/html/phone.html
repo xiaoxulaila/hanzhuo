@@ -1,0 +1,112 @@
+<div id="phoneFooter">
+    <a href="/">
+        <div class="phoneFooter_div">网站首页</div>
+    </a>
+    <div class="phoneFooter_div_line">|</div>
+    <div class="phoneFooter_div" onclick="Service()">在线咨询</div>
+    <div class="phoneFooter_div_line">|</div>
+    <div class="phoneFooter_div" onclick="consultation()">电话咨询</div>
+</div>
+<div id="phonePage" onclick="disappear()">
+    <div id="phonePage_main" onclick="Service()"><a href="tel:{pboot:companymobile}">{pboot:companymobile}</a></div>
+</div>
+<div id="phonePage2" onclick="disappear()">
+    <div id="phonePage_main2" onclick="consultation()"><a href="tel:{pboot:companyphone}">{pboot:companyphone}</a></div>
+</div>
+<script>
+    var phonePage = document.getElementById("phonePage");
+    var phonePage2 = document.getElementById("phonePage2");
+    function disappear() {
+        phonePage.style.display = "none";
+        phonePage2.style.display = "none";
+    }
+    function Service() {
+        phonePage.style.display = "block";
+    }
+    function consultation() {
+        phonePage2.style.display = "block";
+    }
+</script>
+<style>
+    #phoneFooter {
+        width: 100%;
+        height: 10rem;
+        position: fixed;
+        bottom: 0px;
+        z-index: 5000;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .phoneFooter_div {
+        width: 32%;
+        height: 100%;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 10rem;
+        float: left;
+        color: #fff;
+    }
+
+    .phoneFooter_div_line {
+        font-size: 5rem;
+        text-align: center;
+        line-height: 10rem;
+        float: left;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    #phonePage {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 5000;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    #phonePage_main {
+        width: 80%;
+        height: 20rem;
+        margin: auto;
+        position: relative;
+        top: 40%;
+        z-index: 5001;
+        background-color: #f00;
+        color: #fff;
+        font-size: 7rem;
+        text-align: center;
+        line-height: 20rem;
+    }
+
+
+
+    #phonePage2 {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        z-index: 5000;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    #phonePage_main2 {
+        width: 80%;
+        height: 20rem;
+        margin: auto;
+        position: relative;
+        top: 40%;
+        z-index: 5001;
+        background-color: #ff0000;
+        color: #fff;
+        font-size: 7rem;
+        text-align: center;
+        line-height: 20rem;
+    }
+</style>

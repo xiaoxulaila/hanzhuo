@@ -1,0 +1,32 @@
+{include file=nav.html}
+{include file=phone.html}
+<div id="base">
+    <div id="baseMainRight">
+        <div class="baseMRNav">
+            <div class="BMRNav">关于汉卓</div>
+            <div class="BMRNavH4">ABOUT HANZHUO</div>
+            <div class="aaa">
+                {pboot:nav parent={sort:tcode}}
+
+                <a href="[nav:link]">
+                    <div class="baseMRNavder" {pboot:if('[nav:scode]'=='{sort:tcode}')}id="active"{/pboot:if}>[nav:name]</div>
+                </a>
+                <style>
+                    #active{
+                        color: #f00;
+                    }
+                </style>
+
+                {/pboot:nav}
+            </div>
+        </div>
+        <div class="baseMRNew" style="background-color: white;padding-bottom: 20px; height: auto;margin-top: 40px;">
+            <div id="aboutTitleB" style="width: 100%;">{content:title}</div>
+            <div id="aboutTitleC" style="width: 100%;">——</div>
+            <div class="aboutText">
+                {content:content}
+            </div>
+        </div>
+    </div>
+</div>
+{include file=footer.html}

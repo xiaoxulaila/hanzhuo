@@ -1,0 +1,24 @@
+{include file=nav.html}
+{include file=mbx.html}
+{include file=phone.html}
+<div id="case" style="height: 115rem;margin-top: 40px;">
+    <div id="caseMain" style="display: flex; flex-wrap: wrap;height: 110rem;">
+        {pboot:list scode={sort:scode} num=8 page=1}
+
+        <div class="CMain">
+            <a href="[list:link]">
+                <div class="caseImg"><img src="[list:ico]" alt=""></div>
+            </a>
+            <a href="[list:link]">
+                <div class="caseH1">[list:title]</div>
+            </a>
+        </div>
+
+        {/pboot:list}
+
+    </div>
+    <div id="newsPage">
+        {page:bar}
+    </div>
+</div>
+{include file=footer.html}

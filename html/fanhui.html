@@ -1,0 +1,42 @@
+<div class="huiding" style="position: fixed;left: 95%;bottom: 10%;">
+    <div id="gotop" style="display: block;width: 55px;">
+        <div title="回到顶部" id="roll_top"><img src="{label:huiding}" />
+            <div class="abcde"></div>
+        </div>
+    </div>
+</div>
+<style>
+    .abcde {
+        width: 55px;
+        height: 55px;
+        position: relative;
+        top: -58px;
+        background-color: rgba(240, 65, 85, 0);
+    }
+    
+    #gotop:hover .abcde {
+        background-color: rgba(230, 10, 32, 0.4);
+    }
+</style>
+
+
+<script>
+    jQuery(document).ready(function($) {
+        $('#gotop').hide();
+        $('#gotop').click(function() {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function(event) {
+            if ($.browser) {
+                $('#gotop').css('top', $(this).scrollTop() + $(this).height() - 170);
+            }
+            if ($(this).scrollTop() > 260) {
+                $('#gotop').fadeIn();
+            } else {
+                $('#gotop').fadeOut();
+            }
+        });
+    });
+</script>

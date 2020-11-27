@@ -1,0 +1,35 @@
+{include file=nav.html} 
+{include file=phone.html}
+<div id="base">
+    <div id="baseMainRight">
+        <div class="baseMRNav">
+            <div class="BMRNav">新闻资讯</div>
+            <div class="BMRNavH4">NEWS INEORMATION</div>
+            <div class="aaa">
+                {pboot:nav parent=20}
+
+                <a href="[nav:link]">
+                    <div class="baseMRNavder">[nav:name]</div>
+                </a>
+
+                {/pboot:nav}
+            </div>
+        </div>
+
+        <div class="baseMRNew">
+            {pboot:list num=6 page=1}
+            <a href="[list:link]">
+                <div class="baseMRN">
+                    <div class="baseMRNImg"><img src="[list:ico]" alt=""></div>
+                    <div class="baseMRNH1">[list:title]</div>
+                    <div class="baseMRNH5">[list:subtitle]</div>
+                </div>
+            </a>
+            {/pboot:list}
+        </div>
+    </div>
+    <div id="newsPage">
+        {page:bar}
+    </div>
+</div>
+{include file=footer.html}

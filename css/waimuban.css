@@ -1,0 +1,325 @@
+#wai {
+    width: 100%;
+    height: 2000px;
+    margin-bottom: 50px;
+}
+
+#waiMainRight {
+    width: 1400px;
+    padding: 60px 0px;
+    margin: auto;
+}
+
+.waiMRNav {
+    width: 200px;
+    background-color: #fff;
+    float: left;
+}
+
+
+
+
+#BMRNavMain {
+    width: 152px;
+    height: 50px;
+    padding: 15px 24px;
+    background-color: #223244;
+}
+
+.BMRNav {
+    width: 100%;
+    height: 38px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 38px;
+}
+
+.BMRNavH4 {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+.aaa {
+    width: 200px;
+    padding-top: 66px;
+    padding-bottom: 100px;
+    background-color: #fff;
+}
+
+.aaa a {
+    width: 200px;
+    padding-top: 66px;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+}
+
+
+
+.waiMRNavder {
+    width: 127px;
+    height: 40px;
+    color: #333333;
+    font-size: 20px;
+    margin: 0px 36px;
+}
+
+.waiMRNavder span {
+    float: right;
+    font-size: 20px;
+}
+
+.waiMRNavder:hover {
+    color: #f4c41d;
+}
+
+
+
+
+
+
+.waiMRNew {
+    width: 750px;
+    height: 1650px;
+    margin-left: 230px;
+    float: left;
+}
+
+
+.weizhi {
+    width: 750px;
+    height: 60px;
+    margin-left: 60px;
+    color: #333333;
+}
+
+.waiMRNewMain {
+    width: 750px;
+    height: 1580px;
+    /* border: #333333 1px solid; */
+    margin-bottom: 40px;
+}
+
+.waiMRN {
+    width: 90%;
+    height: 140px;
+    margin-left: 20px;
+    border-bottom: #333 1px solid;
+}
+
+.waiMRN:hover .waiMRNH1 {
+    color: #f4c41d;
+}
+
+.waiMRNH1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333;
+    width: 100%;
+    margin-top: 20px;
+    /* padding-left: 10px; */
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.waiMRNH4 {
+    color: #333;
+    width: 100%;
+    height: 20px;
+    line-height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.waiMRNP {
+    color: #333;
+    width: 100%;
+    height: 95px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+
+#outreach{
+    width: 380px;
+    height: 1050px;
+    float: right;
+    background-color: #fff;
+    padding: 10px;
+    margin: auto;
+}
+.outreachText{
+    width: 340px;
+    height: 160px;
+    color: #333;
+    font-size: 16px;
+    margin: auto;
+}
+.outreachF1{
+    width: 360px;
+    height: 260px;
+    margin: auto;
+}
+
+
+.outreachH1{
+    color: #333;
+    font-size: 20px;
+    line-height: 18px;
+    width: 100%;
+    height: 30px;
+}
+.outreachH{
+    color: #f4c41c;
+    width: 100%;
+    height: 35px;
+    font-size: 22px;
+}
+
+
+
+
+.outreachF1Main{
+    width: 100%;
+    height: 210px;
+}
+.outreachF1MainDiv{
+    width: 100%;
+    height: 35px;
+    color: #333333;
+    border-bottom: #333 1px solid;
+    font-size: 14px;
+}
+
+
+
+.outreachF2{
+    width: 360px;
+    height: 200px;
+    margin: auto;
+}
+.outreachF2Main{
+    width: 100%;
+    height: 120px;
+    color: #333;
+}
+.outreachF2MainDiv{
+    width: 100%;
+    height: 25px;
+    color: #333;
+    font-size: 14px;
+}
+
+
+.outreachF3{
+    width: 360px;
+    height: 115px;
+    margin: auto;
+}
+.outreachF3Main{
+    width: 100%;
+    height: 30px;
+}
+.outreachF3MainDiv{
+    background-image: url(../images/zybya.png);
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 26px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    margin-right: 25px;
+
+}
+
+
+.gzhao{
+    width: 118px;
+    height: 170px;
+}
+.gzhao div{
+    width: 100%;
+    height: 118px;
+    text-align: center;
+}
+.gzhao div img{
+    width: 118px;
+    height: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#dowebok {
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+   
+}
+#dowebo {
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+   
+}
+#doweb {
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+   
+}
+#dowe{
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.waiMRNN{
+    width: 80%;
+    height: 100%;
+    margin-left: 62px;
+}
+.waiMRNP p{
+    width: 100%;
+    height: 35px;
+    line-height: 80px;
+    font-size: 15px;
+}

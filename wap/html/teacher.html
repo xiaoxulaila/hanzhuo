@@ -1,0 +1,39 @@
+{include file=nav.html}
+{include file=phone.html}
+<div id="base">
+    <div id="baseMainRight">
+        <div class="baseMRNav">
+            <div class="BMRNav">关于汉卓</div>
+            <div class="BMRNavH4">ABOUT HANZHUO</div>
+            <div class="aaa">
+                {pboot:nav parent={sort:tcode}}
+                <a href="[nav:link]">
+                    <div class="baseMRNavder">[nav:name]</div>
+                </a>
+                {/pboot:nav}
+            </div>
+        </div>
+        <div class="baseMRNew">
+            <div id="newTitle">
+                <div id="newTitleA">FACULTYTEAM</div>
+                <div id="newTitleB">师资团队</div>
+                <div id="newTitleC">——</div>
+            </div>
+            {pboot:list num=8}
+            <a href="[list:link]">
+                <div class="CMain">
+                    <div class="caseImg"><img src="[list:ico]" alt=""></div>
+                    <div class="caseH1">[list:title]</div>
+                </div>
+            </a>
+            {/pboot:list}
+        </div>
+    </div>
+    <div id="newsPage">
+        {page:bar}
+    </div>
+</div>
+{include file=footer.html}
+<script type="text/javascript" charset="utf-8"
+    src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>

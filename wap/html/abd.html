@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords"  content="{pboot:pagekeywords}">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+        <script src="https://unpkg.com/swiper/js/swiper.js">
+        </script>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js">
+        </script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.esm.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.esm.bundle.js"></script> -->
+        <meta name="description"  content="{pboot:pagedescription}">
+            <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+            <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css">
+            <link rel="stylesheet" href="{pboot:sitetplpath}/css/news.css">
+            <link rel="stylesheet" href="{pboot:sitetplpath}/css/abc.css">
+            <meta name="viewport" content="width=device-width,initial-scale=0.32,maximum-scale=1.0,minimum-scale=0.3,user-scalable=no">
+            <title>{pboot:pagetitle}</title>
+
+
+            <link href="{pboot:sitetplpath}/css/jquery.exzoom.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    {include file=navv.html} {include file=fanhui.html} {include file=mbx.html}
+    <div id="abc">
+        <div id="abcMain">
+            <div class="ABCMM">
+                <div id="abcH1">{content:title}</div>
+                <div id="adcT">作者：{content:author} 发表日期：{content:date}</div>
+
+                <div style="display: flex;justify-content: space-around; margin-top: 30px; ">
+                    <div style="width: 450px;">
+                        <div class="exzoom" id="exzoom">
+                            <img style="width: 400px;height: 300px;" src="{content:ico}" />
+                        </div>
+                    </div>
+
+
+                    <div style="width: 600px;padding-top: 15px; position: relative;">
+                        <div style="margin-top: 20px;line-height: 25px; text-align: justify;height: 255px;">
+                            {content:ext_jianjie}{content:ext_jj}{content:ext_jieshao}
+                        </div>
+
+                        <!-- <div style="font-size: 20px; ">
+                            <div id="abcSpanWBZD">定制咨询</div> <b style="color: red;">{pboot:companymobile}</b>
+                        </div> -->
+                    </div>
+
+
+
+                </div>
+                <div class="bshare-custom">
+                    <span>分享到：</span>
+                    <div class="bsPromo bsPromo2"></div>
+                    <a title="分享到QQ空间" class="bshare-qzone"></a>
+                    <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                    <a title="分享到人人网" class="bshare-renren"></a>
+                    <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a>
+                    <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a>
+                </div>
+
+
+
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+                <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+                <div id="abcC">{content:content}</div>
+                <div id="abcAA">上一页：{content:precontent}<br> 下一页：{content:nextcontent}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {include file=footer.html}
+</body>
+
+</html>

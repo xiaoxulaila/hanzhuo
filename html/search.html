@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{pboot:pagetitle}</title>
+    <meta name="Keywords" content="{pboot:sitekeywords}" />
+    <meta name="Description" content="{pboot:sitedescription}" />
+
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/about.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/case.css">
+
+</head>
+
+<body>
+    {include file=navv.html} {include file=sidelight.html}
+    <div id="case">
+        <div id="caseMain" style="display: flex; flex-wrap: wrap;">
+            {pboot:search}
+
+            <div class="CMain">
+                <a href="[search:link]">
+                    <div class="caseImg"><img src="[search:ico]" alt=""></div>
+                </a>
+                <a href="[search:link]">
+                    <div class="caseH1">[search:title]</div>
+                </a>
+            </div>
+
+            {/pboot:search}
+        </div>
+        <div id="newsPage">
+            {page:bar}
+        </div>
+    </div>
+    {include file=footer.html}
+</body>
+
+</html>

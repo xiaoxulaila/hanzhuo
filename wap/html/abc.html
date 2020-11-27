@@ -1,0 +1,167 @@
+{include file=navv.html} {include file=fanhui.html}
+<div id="abc">
+    <div id="abcMain">
+        <div class="ABCMM">
+            <div id="abcH1">{content:title}</div>
+            <div id="adcT">作者：{content:author} 发表日期：{content:date}</div>
+
+            <div style="display: flex;justify-content: space-around; margin-top: 30px; ">
+                <diV style="width: 450px;">
+
+                    <div class="exzoom" id="exzoom">
+                        <!--大图区域-->
+                        <div class="exzoom_img_box" style="background:none;height: 350px;
+                            position: relative;top: -40px;">
+                            <ul class='exzoom_img_ul'>
+                                {pboot:pics id={content:id}}
+                                <li><img style="width: 400px;height: 300px;" src="[pics:src]" /></li>
+
+                                {/pboot:pics}
+                            </ul>
+                        </div>
+                        <!--缩略图导航-->
+                        <div class="exzoom_nav" style="position: relative;top: -70px;"></div>
+                        <!--控制按钮-->
+                        <p class="exzoom_btn" style="position: relative;top: -70px;">
+                            <a href="javascript:void(0);" class="exzoom_prev_btn"> &lt; </a>
+                            <a href="javascript:void(0);" class="exzoom_next_btn"> &gt; </a>
+                        </p>
+                    </div>
+
+
+                    <div class="exzoom_nav"></div>
+
+                    <script src="{pboot:sitetplpath}/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+                    <script src="{pboot:sitetplpath}/js/jquery.exzoom.js"></script>
+                    <script type="text/javascript">
+                        $("#exzoom").exzoom({
+                            autoPlay: false,
+                        }); //方法调用，务必在加载完后执行
+                    </script>
+                </diV>
+
+
+                <div style="width: 600px;padding-top: 15px; position: relative;">
+
+
+
+
+                    <div style="margin-top: 20px;line-height: 25px; text-align: justify;">
+                        {content:ext_jianjie}{content:ext_jj}{content:ext_jieshao}
+                    </div>
+
+                    <!-- <div style="position: absolute;bottom: 91px;font-size: 20px; ">
+                        <div id="abcSpanWBZD">定制咨询</div> <b style="color: red;">{pboot:companymobile}</b>
+                    </div> -->
+                </div>
+
+
+            </div>
+            <div class="bshare-custom">
+                <span>分享到：</span>
+                <div class="bsPromo bsPromo2"></div>
+                <a title="分享到QQ空间" class="bshare-qzone"></a>
+                <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+                <a title="分享到人人网" class="bshare-renren"></a>
+                <a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a>
+                <a title="分享到QQ好友" class="bshare-qqim" href="javascript:void(0);"></a>
+            </div>
+
+
+
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+            <div id="abcC">{content:content}</div>
+            <div id="abcAA">上一页：{content:precontent}<br> 下一页：{content:nextcontent}
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="abcdeld">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            {pboot:list scode={sort:scode}}
+            <div class="swiper-slide">
+
+                <div class="sssli">
+                    <div class="sssliimg">
+                        <a href="[list:link]"><img src="[list:ico]" alt=""></a>
+                    </div>
+                    <div class="ssslidiv"><a href="[list:link]">[list:title]</a></div>
+                </div>
+
+            </div>
+            {/pboot:list}
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+{include file=footer.html}
+
+<script>
+    effect = 0
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        speed: 2500,
+        slidesPerView: 5,
+        spaceBetween: 30,
+        centeredSlides: true,
+        watchSlidesProgress: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        on: {
+            setTranslate: function() {
+                slides = this.slides
+                for (i = 0; i < slides.length; i++) {
+                    slide = slides.eq(i)
+                    progress = slides[i].progress
+                        //slide.html(progress.toFixed(2)); 看清楚progress是怎么变化的
+                    slide.css({
+                        'opacity': '',
+                        'background': ''
+                    });
+                    slide.transform(''); //清除样式
+
+                    if (effect == 1) {
+                        slide.transform('scale(' + (1 - Math.abs(progress) / 8) + ')');
+                    } else if (effect == 2) {
+                        slide.css('opacity', (1 - Math.abs(progress) / 6));
+                        slide.transform('translate3d(0,' + Math.abs(progress) * 20 + 'px, 0)');
+                    } else if (effect == 3) {
+                        slide.transform('rotate(' + progress * 30 + 'deg)');
+                    } else if (effect == 4) {
+                        slide.css('background', 'rgba(' + (255 - Math.abs(progress) * 20) + ',' + (127 + progress * 32) + ',' + Math.abs(progress) * 64 + ')');
+                    }
+
+                }
+            },
+            setTransition: function(transition) {
+                for (var i = 0; i < this.slides.length; i++) {
+                    var slide = this.slides.eq(i)
+                    slide.transition(transition);
+                }
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    pe = document.getElementById('progressEffect');
+    pe.onchange = function() {
+        effect = this.value
+        swiper.update();
+    }
+</script>

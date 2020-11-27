@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{pboot:pagetitle}</title>
+    <meta name="Keywords" content="{pboot:sitekeywords}" />
+    <meta name="Description" content="{pboot:sitedescription}" />
+
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/news.css"> {pboot:sitestatistical}
+
+</head>
+
+<body>
+    {include file=nav.html} {include file=sidelight.html}
+    <div id="base">
+        <div id="baseMainRight">
+            <div class="baseMRNav">
+                <div class="BMRNav">茁悦少年</div>
+                <div class="BMRNavH4">OUTSTANDING YOUTH</div>
+
+                <div class="aaa">
+                    {pboot:nav parent={sort:tcode}}
+
+                    <a href="[nav:link]" class="navclass {pboot:if([nav:scode]=={sort:scode})} activeq {/pboot:if}">
+                        <div class="baseMRNavder">[nav:name]</div>
+                    </a>
+                    {/pboot:nav}
+                </div>
+            </div>
+
+
+            <div class="baseMRNew">
+                {pboot:list num=12}
+                <a href="[list:link]">
+                    <div class="baseMRN">
+                        <div class="baseMRNImg"><img src="[list:ico]" alt=""></div>
+                        <div class="baseMRNH1">[list:title]</div>
+                        <div class="baseMRNH5">[list:subtitle]</div>
+                    </div>
+                </a>
+                {/pboot:list}
+            </div>
+            <div id="newsPage">
+                {page:bar}
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <script>
+        $(function() {
+            for (var i = 1; i < $(".baseMRNew").length; i++) {
+                $(".baseMRNew").eq(i).hide();
+            }
+
+            for (var i = 0; i < $(".navclass").length; i++) {
+                if ($(".navclass").eq(i).hasClass("navactive")) {
+                    inform1(i);
+
+                }
+            }
+
+            function inform1(n) {
+                for (var i = 0; i < $(".baseMRNew").length; i++) {
+                    $(".baseMRNew").eq(i).hide();
+                    $(".navclass").eq(i).removeClass("activeq");
+                }
+
+                $(".baseMRNew").eq(n + 1).show();
+                $(".navclass").eq(n).addClass("activeq");
+            }
+
+            $(".navclass").mouseenter(function() {
+                for (var i = 0; i < $(".baseMRNew").length; i++) {
+                    $(".baseMRNew").eq(i).hide();
+                    $(".navclass").eq(i).removeClass("activeq");
+                }
+
+                $(".baseMRNew").eq($(this).index() + 1).show();
+                $(".navclass").eq($(this).index()).addClass("activeq");
+            });
+
+        });
+    </script> -->
+
+    {include file=footer.html}
+</body>
+
+</html>

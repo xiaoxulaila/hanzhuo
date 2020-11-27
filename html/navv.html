@@ -1,0 +1,50 @@
+<div id="navber">
+    <div id="sb">
+        <div id="sbd">
+            <div class="SBDp AB">欢迎进入你{pboot:companyname}公司官网！</div>
+            <div class="SBDp AC">联系电话: <span>{pboot:companymobile}</span> {pboot:companycontact} (同微信) &nbsp;全国咨询电话:
+                <span>{pboot:companyphone}</span></div>
+        </div>
+    </div>
+    <div id="nav">
+        <div id="navLogo">
+            <a href="/">
+                <div id="navImg"><img src="{pboot:sitelogo}" alt=""></div>
+            </a>
+        </div>
+        <div id="navb">
+            <a href="/">
+                <div class="navbe" {pboot:if(0=={sort:scode})}id="active" {/pboot:if}>
+                    <div class="navbee">网站首页</div>
+                    <div class="navs"></div>
+                </div>
+            </a>
+            {pboot:nav num=6}
+            <a href="[nav:link]">
+                <div class="navbe">
+                    <div class="navbee" {pboot:if( '[nav:scode]'=='{sort:tcode}' )}id="active" {/pboot:if}>[nav:name]</div>
+                    <div class="navs"></div>
+                    <div class="navaa">
+                        {pboot:2nav parent=[nav:scode]}
+
+                        <a href="[2nav:link]">
+                                [2nav:name]
+                            </a> {/pboot:2nav}
+                    </div>
+                </div>
+
+            </a>
+            {/pboot:nav}
+        </div>
+    </div>
+    <style>
+        #active {
+            color: #f00;
+        }
+        
+        .active {
+            color: #f00;
+        }
+    </style>
+</div>
+<div class="nanya"></div>

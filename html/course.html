@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{pboot:pagetitle}</title>
+    <meta name="Keywords" content="{pboot:sitekeywords}" />
+    <meta name="Description" content="{pboot:sitedescription}" />
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/case.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/news.css"> {pboot:sitestatistical}
+
+</head>
+
+<body>
+    {include file=nav.html} {include file=sidelight.html}
+    <div id="leagvebuilding">
+        <div id="leagve">
+            <div id="leagveDiv" style="margin-top: 30px;">
+                <div class="baseMRNav">
+                    <div class="BMRNav">{sort:topname}</div>
+                    <div class="BMRNavH4">LEAGVEBUILDING</div>
+                    <div class="aaa">
+                        {pboot:nav parent={sort:tcode}}
+                        <a href="[nav:link]" class="navclass {pboot:if([nav:scode]=={sort:scode})} activeq {/pboot:if}">
+                            <div class="baseMRNavder">[nav:name]</div>
+                        </a>
+                        {/pboot:nav}
+                    </div>
+                </div>
+
+
+                <style>
+                    #active {
+                        color: #f00;
+                        display: block;
+                    }
+                    
+                    .active {
+                        color: #f00;
+                    }
+                </style>
+
+
+
+                <div>
+
+
+                    <div class="CLDMain navCLDMain">
+                        {pboot:list page=1 num=12}
+                        <a href="[list:link]">
+                            <div class="LDM">
+                                <div class="LDMImg"><img src="[list:ico]" alt=""></div>
+                                <div class="LDMText">[list:title]</div>
+                            </div>
+                        </a>
+                        {/pboot:list}
+                    </div>
+
+                </div>
+
+                <div id="newsPage">
+                    {page:bar}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // $(function() {
+
+        //     for (var i = 1; i < $(".navCLDMain").length; i++) {
+        //         $(".navCLDMain").eq(i).hide();
+        //     }
+
+        //     for (var i = 0; i < $(".navclass").length; i++) {
+        //         if ($(".navclass").eq(i).hasClass("navactive")) {
+        //             inform1(i);
+
+        //         }
+        //     }
+
+        //     function inform1(n) {
+
+        //         for (var i = 0; i < $(".navCLDMain").length; i++) {
+        //             $(".navCLDMain").eq(i).hide();
+        //             $(".navclass").eq(i).removeClass("activeq");
+        //         }
+        //         $(".navCLDMain").eq(n + 1).show();
+        //         $(".navclass").eq(n).addClass("activeq");
+        //     }
+
+        //     $(".navclass").mouseenter(function() {
+        //         for (var i = 0; i < $(".navCLDMain").length; i++) {
+        //             $(".navCLDMain").eq(i).hide();
+        //             $(".navclass").eq(i).removeClass("activeq");
+        //         }
+
+        //         $(".navCLDMain").eq($(this).index() + 1).show();
+        //         $(".navclass").eq($(this).index()).addClass("activeq");
+        //     });
+
+        // });
+    </script>
+
+
+    {include file=footer.html}
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{pboot:pagetitle}</title>
+    <meta name="Keywords" content="{pboot:sitekeywords}" />
+    <meta name="Description" content="{pboot:sitedescription}" />
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/case.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/news.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css"> {pboot:sitestatistical}
+
+</head>
+
+<body>
+    {include file=nav.html} {include file=sidelight.html}
+
+    <div id="case">
+        <div id="caseMain" style="display: flex; flex-wrap: wrap;">
+            {pboot:list scode={sort:scode} num=16 page=1}
+
+            <div class="CMain">
+                <a href="[list:link]">
+                    <div class="caseImg"><img src="[list:ico]" alt=""></div>
+                </a>
+                <a href="[list:link]">
+                    <div class="caseH1">[list:title]</div>
+                </a>
+                <div class="caseH1 caseH2">[list:subtitle]</div>
+                <div class="caseH1 caseH3">[list:date]</div>
+            </div>
+
+            {/pboot:list}
+
+        </div>
+        <div id="newsPage">
+            {page:bar}
+        </div>
+    </div>
+
+
+
+    {include file=footer.html}
+</body>
+
+</html>

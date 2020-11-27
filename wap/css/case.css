@@ -1,0 +1,89 @@
+#case {
+    width: 100%;
+    height: 800px;
+}
+
+#caseMain {
+    width: 1100px;
+    height: 750px;
+    margin: auto;
+}
+
+#caseMain {
+    color: #000;
+    text-decoration: none;
+}
+
+.CMain {
+    width: 40%;
+    height: 20rem;
+    border: #ccc 1px solid;
+    margin: 4%;
+    cursor: pointer;
+    transition: all 0.6s;
+    overflow: hidden;
+    float: left;
+}
+
+
+.CMain:hover .caseImg img {
+    transform: scale(1.1,1.1);
+}
+.CMain:hover .caseH1 {
+    color: #f00;
+}
+.caseImg {
+    width: 100%;
+    height: 15rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.CMain a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.caseImg img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+
+
+.caseH1 {
+    width: 100%;
+    text-align: center;
+    line-height: 300%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+.CLDMain{
+    width: 40rem;
+    float: right;
+    padding-right: 12rem;
+}
+.CLDMain a{
+    color: #000;
+    text-decoration: none;
+}
+.LDM{
+    float: left;
+}

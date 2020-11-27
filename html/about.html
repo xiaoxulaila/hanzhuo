@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{pboot:pagetitle}</title>
+    <meta name="Keywords" content="{pboot:sitekeywords}" />
+    <meta name="Description" content="{pboot:sitedescription}" />
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/case.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/css.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/about.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/base.css">
+    <link rel="stylesheet" href="{pboot:sitetplpath}/css/news.css"> {pboot:sitestatistical}
+
+</head>
+
+<body>
+    {include file=nav.html} {include file=sidelight.html}
+
+
+    <div id="base">
+        <div id="baseMainRight">
+            <div class="baseMRNav">
+                <div class="BMRNav">关于汉卓</div>
+                <div class="BMRNavH4">ABOUT HANZHUO</div>
+                <div class="aaa">
+                    {pboot:nav parent={sort:tcode}}
+                    <a href="[nav:link]" class="navclass {pboot:if([nav:scode]=={sort:scode})} navactive {/pboot:if}" onmouseover="onnav([nav:n])">
+                        <div class="baseMRNavder">[nav:name]</div>
+                    </a>
+                    {/pboot:nav}
+                </div>
+            </div>
+
+            <div class="baseMRNew" style="background-color: white;padding-bottom: 20px; height: auto;margin-top: 40px;">
+                {pboot:content scode=6}
+                <div id="aboutTitleB" style="width: 100%;">[content:title]</div>
+                <div id="aboutTitleC" style="width: 100%;">——</div>
+
+                <div class="aboutText">
+                    [content:content]
+                </div>
+                {/pboot:content}
+            </div>
+
+
+
+
+            {pboot:nav parent={sort:tcode} num=2}
+            <div class="baseMRNew" style="background-color: white;padding-bottom: 20px; height: auto;margin-top: 40px;">
+                {pboot:content scode=[nav:scode]}
+                <div id="aboutTitleB" style="width: 100%;">[content:title]</div>
+                <div id="aboutTitleC" style="width: 100%;">——</div>
+
+                <div class="aboutText">
+                    [content:content]
+                </div>
+                {/pboot:content}
+            </div>
+            {/pboot:nav}
+
+            <div class="baseMRNew">
+                <div id="newTitle">
+                    <div id="newTitleA">FACULTYTEAM</div>
+                    <div id="newTitleB">师资团队</div>
+                    <div id="newTitleC">——</div>
+                </div>
+                {pboot:list scode=35 num=9999}
+                <a href="[list:link]">
+                    <div class="CMain">
+                        <div class="caseImg"><img src="[list:ico]" alt=""></div>
+                        <div class="caseH1">[list:title]</div>
+                    </div>
+                </a>
+                {/pboot:list}
+
+            </div>
+
+            {pboot:nav parent={sort:tcode}} {pboot:if([nav:n]>2)}
+            <div class="baseMRNew" style="background-color: white;padding-bottom: 20px; height: auto;margin-top: 40px;">
+                {pboot:content scode=[nav:scode]}
+                <div id="aboutTitleB" style="width: 100%;">[content:title]</div>
+                <div id="aboutTitleC" style="width: 100%;">——</div>
+
+                <div class="aboutText">
+                    [content:content]
+                </div>
+                {/pboot:content}
+            </div>
+            {/pboot:if} {/pboot:nav}
+        </div>
+
+    </div>
+    <script>
+        for (var i = 1; i < $(".baseMRNew").length; i++) {
+            $(".baseMRNew").eq(i).hide();
+        }
+
+        for (var i = 0; i < $(".navclass").length; i++) {
+            if ($(".navclass").eq(i).hasClass("navactive")) {
+                inform1(i);
+
+            }
+        }
+
+        function inform1(n) {
+            for (var i = 0; i < $(".baseMRNew").length; i++) {
+                $(".baseMRNew").eq(i).hide();
+                $(".navclass").eq(i).removeClass("activeq");
+            }
+
+            $(".baseMRNew").eq(n + 1).show();
+            $(".navclass").eq(n).addClass("activeq");
+        }
+
+        function onnav(n) {
+
+            for (var i = 0; i < $(".baseMRNew").length; i++) {
+                $(".baseMRNew").eq(i).hide();
+                $(".navclass").eq(i).removeClass("activeq");
+            }
+
+            $(".baseMRNew").eq(n + 1).show();
+            $(".navclass").eq(n).addClass("activeq");
+
+        }
+    </script>
+
+
+    {include file=footer.html}
+</body>
+
+</html>
